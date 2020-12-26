@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "/assets/style.css" >
+    <title>ChattingApp</title>
+</head>
+<body>
+    <h1 class="non-Text">Just a basic Chatting Board</h1>    
+        <div class="messages">
+           <% data.messages.forEach(result => { %>
+            <% if(data.user == result.authorId){ %>
+            <div class="name">you: </div>
+            <div class="messageR" >
+                <form id="<%=result._id%>" action="http://localhost:5000/chat/<%=result._id%>/<%=data.user%>?_method=DELETE" method="POST">
+                    <%=result.text %>
+                <a onclick="document.getElementById('<%=result._id%>').submit();">x</a></form>
+            </div>
+                 <% } else{ %><div class="name"><%= result.name%>: </div><div class="messageL" ><%=result.text %>  </div> <% } %>  
+                <%}); %>  
+           </div>
+        
+
+        <form class="chat-form" action="http://localhost:5000/chat" method="POST">
+        <textarea id="textarea" class="non-Text" name="text" rows="5" cols="15"></textarea>
+        <input id="button" type="submit">
+        </form>
+</body>
+</html>

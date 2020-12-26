@@ -1,0 +1,53 @@
+*{
+    width: 70%;
+    background-color: gray;
+    font-family: 'montserrat', sans-serif;
+    font-size: 20px;
+}
+
+body {
+    align-items: center;
+    margin-left: 50%;
+}
+
+.non-Text{
+    display: flex;
+    justify-content: center;
+    margin-left: -10%;
+    margin-bottom: 5%;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5%;
+}
+
+.messageL{ 
+    align-content: flex-end;
+    margin : auto;
+    margin-left: 40%;
+}
+.messageR{ 
+    align-content: flex-end;
+    margin : auto;
+    margin-left: 40%;
+    color: blue;
+}
+.messageR a{
+    right: 0px;
+    color: red;
+    cursor: pointer;
+}
+.chat-form {
+    margin: 5% 10%;
+}
+#button {
+    margin-top: 5%;
+    width: 50%;
+}
+
+.chat-form #buton {
+    margin-top: 10%;
+}
